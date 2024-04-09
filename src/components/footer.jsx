@@ -1,5 +1,5 @@
 import React from "react";
-// https://reactjsexample.com/a-filterable-gallery-built-with-reactjs-and-tailwind-css/
+
 function Footer() {
     const year = new Date().getFullYear();
     return (

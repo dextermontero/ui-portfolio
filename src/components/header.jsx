@@ -1,17 +1,20 @@
+// Header.js
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
         <>
-            <header className="bg-gray-900 text-gray-50 p-4 top-0 sticky mb-5">
+            <header className="bg-gray-900 text-gray-50 p-4 top-0 sticky mb-5 z-50">
                 <div className="container mx-auto px-4">
                     <nav className="flex justify-between items-center">
-                        <a href="#asasdasdas">
-                            DM
-                        </a>
+                        <Link to="/">
+                            <h2 className="text-2xl font-semibold">DM</h2>
+                        </Link>
                         <ul className="flex flex-row font-medium text-lg">
-                            <li className="mr-4"><a href="https://google.com">Home</a></li>
-                            <li><a href="https://google.com">Projects</a></li>
+                            <Link to="/">
+                                <li className="mr-4">Home</li>
+                            </Link>
                         </ul>
                     </nav>
                 </div>
@@ -20,4 +23,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header;
