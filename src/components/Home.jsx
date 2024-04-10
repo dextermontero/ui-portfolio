@@ -1,16 +1,51 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faXTwitter, faInstagram, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons"
+import lottie from "lottie-web"
 
 function Home() {
+
+    const waveHand = useRef(null)
+
+    useEffect(() => {
+        const waveHands = lottie.loadAnimation({
+            container: waveHand.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: require("../lotties/wave-hand.json")
+        });
+
+        return () => {
+            waveHands.destroy();
+          };
+    }, []);
+
+    const personCodes = useRef(null)
+
+    useEffect(() => {
+        const personCode = lottie.loadAnimation({
+            container: personCodes.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: require("../lotties/person-coding.json")
+        });
+
+        return () => {
+            personCode.destroy();
+          };
+    }, []);
+
     return (
-        <section id="home" className="container lg:mx-40 mb-20 group">
-            <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-4 gap-y-4 mb-10 mt-10">
+        <section id="home" className="container mb-20 group">
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-4 gap-y-4 mb-10 mt-10 lg:place-items-center">
                 <div className="order-1">
                     <div className="flex justify-start items-center">
-                        Hi, 
+                       <h2 className="text-2xl font-medium tracking-wider">Hi,</h2>
+                       <div className="w-14" ref={waveHand}></div>
                     </div>
                     <h2 className="text-4xl font-bold font-serif tracking-wider text-gray-700 mb-8">Dexter Montero</h2>
                     <div className="flex flex-wrap items-center justify-start mb-10">
@@ -50,7 +85,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="order-2 hidden lg:block">
-                    aaaaaaaaaaaaa
+                    <div className="mb-4 h-96" ref={personCodes}></div>
                 </div>
             </div>
         </section>

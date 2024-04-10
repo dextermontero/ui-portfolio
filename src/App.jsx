@@ -14,6 +14,7 @@ import Vet from "./pages/Vet.jsx"
 import BlindNavigation from "./pages/BlindNavigation.jsx"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import MoveToTop from "./components/MoveToTop.jsx"
 
 function App() {
     return (
@@ -49,6 +50,7 @@ function App() {
                     </Route>
                 </Switch>
             </main>
+            <MoveToTop />
             <Footer />
         </Router>
     )
