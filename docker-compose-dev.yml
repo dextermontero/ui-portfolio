@@ -1,0 +1,13 @@
+services:
+  react:
+    container_name: portfolio
+    restart: always
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app-react
+    environment:
+      - NODE_ENV=development

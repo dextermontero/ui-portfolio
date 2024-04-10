@@ -1,6 +1,6 @@
 import React from "react";
 
-const SkillSets = () => {
+function SkillSets() {
     return (
         <>
             <h1 className="mb-3 font-bold tracking-wider text-3xl">Skills and Tools</h1>

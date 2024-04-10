@@ -1,7 +1,8 @@
-import Header from "./components/Header"
-import Projects from "./components/Projects";
-import Footer from "./components/Footer"
-import Technologies from "./components/Technologies"
+import Header from "./components/Header.jsx"
+import Home from "./components/Home.jsx"
+import Projects from "./components/Projects.jsx"
+import Footer from "./components/Footer.jsx"
+import Technologies from "./components/Technologies.jsx"
 import NotFound from "./components/404.jsx"
 
 // Pages
@@ -21,6 +22,7 @@ function App() {
             <main className="container mx-auto px-4">
                 <Switch>
                     <Route exact path="/">
+                        <Home />
                         <Technologies />
                         <Projects />
                     </Route>
@@ -51,4 +53,7 @@ function App() {
         </Router>
     )
 }
+
+document.body.classList.add('bg-gray-100');
+
 export default App;
