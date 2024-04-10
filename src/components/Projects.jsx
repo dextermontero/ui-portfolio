@@ -11,7 +11,7 @@ function Projects() {
                     dataList.map((item, index) => (
                         
                         <div key={index} className="w-full relative cursor-pointer transition-all duration-200 rounded-lg shadow bg-gray-800 border border-gray-600 group">
-                            <img src={item.img} alt={item.title} className="w-full h-72 object-cover rounded-t-lg group-hover:opacity-50" />
+                            <img src={item.img} alt={item.title} className="w-full h-72 object-cover rounded-t-lg group-hover:opacity-50 transition duration-300 ease-in-out" />
                             <div className="p-3">
                                 <h5 className="text-1xl font-bold tracking-wide text-gray-50 capitalize">{item.title}</h5>
                                 <span className="text-blue-300 text-lg tracking-wide mb-2">{item.type}</span>
