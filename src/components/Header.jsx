@@ -9,9 +9,9 @@ function Header() {
                 <div className="container mx-auto px-4">
                     <nav className="flex justify-between items-center">
                         <Link to="/">
-                            <h2 className="text-2xl font-semibold">DM</h2>
+                            <h2 className="text-2xl font-semibold font-montserrat-regular">DM</h2>
                         </Link>
-                        <ul className="flex flex-row font-medium text-lg">
+                        <ul className="flex flex-row font-medium text-lg font-montserrat-regular">
                             <Link to="/">
                                 <li className="mr-4">Home</li>
                             </Link>

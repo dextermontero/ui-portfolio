@@ -44,10 +44,10 @@ function Home() {
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-4 gap-y-4 mb-10 mt-10 lg:place-items-center">
                 <div className="order-1">
                     <div className="flex justify-start items-center">
-                       <h2 className="text-2xl font-medium tracking-wider">Hi,</h2>
+                       <h2 className="text-2xl font-montserrat-regular font-bold tracking-wider">Hi,</h2>
                        <div className="w-14" ref={waveHand}></div>
                     </div>
-                    <h2 className="text-4xl font-bold font-serif tracking-wider text-gray-700 mb-8">Dexter Montero</h2>
+                    <h2 className="text-4xl font-bold font-montserrat-extrabold tracking-wider text-gray-700 mb-8">Dexter Montero</h2>
                     <div className="flex flex-wrap items-center justify-start mb-10">
                         <Link to={{ pathname: "https://www.facebook.com/Unkwonymous" }} target="_blank" className="pr-2" alt="Facebook Account">
                             <span className="bg-blue-800 text-white rounded-md text-xl px-4 py-3 hover:text-blue-800 hover:bg-white transition duration-300 ease-in-out shadow-md">
