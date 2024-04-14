@@ -1,20 +1,20 @@
-import Header from "./components/Header.jsx"
-import Home from "./components/Home.jsx"
-import Projects from "./components/Projects.jsx"
-import Footer from "./components/Footer.jsx"
-import Technologies from "./components/Technologies.jsx"
-import NotFound from "./components/404.jsx"
+import Header from "./components/Header"
+import Home from "./components/Home"
+import Projects from "./components/Projects"
+import Footer from "./components/Footer"
+import Technologies from "./components/Technologies"
+import NotFound from "./components/404"
 
 // Pages
-import Kanban from "./pages/Kanban.jsx"
-import JobSearch from "./pages/JobSearch.jsx"
-import Management from "./pages/Managements.jsx"
-import Attendance from "./pages/Attendance.jsx"
-import Vet from "./pages/Vet.jsx"
-import BlindNavigation from "./pages/BlindNavigation.jsx"
+import Kanban from "./pages/Kanban"
+import JobSearch from "./pages/JobSearch"
+import Management from "./pages/Managements"
+import Attendance from "./pages/Attendance"
+import Vet from "./pages/Vet"
+import BlindNavigation from "./pages/BlindNavigation"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import MoveToTop from "./components/MoveToTop.jsx"
+import MoveToTop from "./components/MoveToTop"
 
 function App() {
     return (

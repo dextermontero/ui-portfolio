@@ -1,5 +1,3 @@
-import React from "react";
-
 function Kanban() {
     return (
         <p>This is a Kanban Page</p>

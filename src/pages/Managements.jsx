@@ -1,5 +1,3 @@
-import React from "react";
-
 function Management() {
     return (
         <p>This is a QCU Management Page</p>

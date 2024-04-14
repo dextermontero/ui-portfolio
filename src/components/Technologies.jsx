@@ -1,8 +1,8 @@
-import React from "react";
 import { FaHtml5, FaCss3Alt, FaPhp, FaJava, FaBootstrap, FaLaravel, FaPython, FaDocker } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiMysql, SiVisualstudio, SiTailwindcss, SiMongodb } from "react-icons/si";
+import { SiMysql, SiVisualstudio, SiTailwindcss, SiMongodb, SiRedis } from "react-icons/si";
 import { FaGit } from "react-icons/fa6";
+import { FcLinux } from "react-icons/fc";
 
 function SkillSets() {
     return (
@@ -51,6 +51,12 @@ function SkillSets() {
                     </span>
                     <span className="pr-3 mb-4">
                         <FaDocker className="text-5xl text-blue-500"/>
+                    </span>
+                    <span className="pr-3 mb-4">
+                        <SiRedis className="text-5xl text-red-500"/>
+                    </span>
+                    <span className="pr-3 mb-4">
+                        <FcLinux className="text-5xl text-blue-500"/>
                     </span>
                 </div>
             </div>
