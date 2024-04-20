@@ -6,14 +6,21 @@ import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons"
 import personCoding from '../lotties/person-coding.json'
 import haveWaving from '../lotties/wave-hand.json'
 import lottie from "lottie-web"
-import downloadCV from "../assets/resume/Dexter_Montero.pdf"
+// @ts-ignore
+import downloadCV from "../assets/resume/Dexter_Montero.pdf";
+import { TbBounceLeft } from "react-icons/tb";
 
 function Home() {
+    
+    useEffect(() => {
+        document.title = 'My Personal Portfolio ';
+    }, []);
 
     const waveHand = useRef(null)
 
     useEffect(() => {
         const waveHands = lottie.loadAnimation({
+            // @ts-ignore
             container: waveHand.current,
             renderer: 'svg',
             loop: true,
@@ -30,6 +37,7 @@ function Home() {
 
     useEffect(() => {
         const personCode = lottie.loadAnimation({
+            // @ts-ignore
             container: personCodes.current,
             renderer: 'svg',
             loop: true,

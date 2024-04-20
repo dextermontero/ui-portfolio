@@ -2,12 +2,12 @@ FROM node:18-alpine
 
 WORKDIR /app-react
 
-COPY package*.json /app-react/
+COPY package*.json .
 
 RUN npm install
 
-COPY . /app-react/
+COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "run", "dev", "--host"]
+CMD ["npm", "run", "dev"]

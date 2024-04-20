@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Projects() {
     return (
         <>
-            <h1 className="mb-3 font-montserrat-bold uppercase tracking-wider text-3xl">Works</h1>
+            <h1 className="mb-3 font-montserrat-bold uppercase tracking-wider text-3xl text-gray-700">Works</h1>
             <div className="w-full grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-x-5 gap-y-5">
                 {
                     dataList.map((item, index) => (

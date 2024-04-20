@@ -80,3 +80,8 @@
     font-family: "montserrat-thin-italic";
     src: url('./fonts/Montserrat-ThinItalic.ttf') format('truetype');
 }
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+  }

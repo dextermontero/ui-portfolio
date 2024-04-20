@@ -15,6 +15,7 @@ import BlindNavigation from "./pages/BlindNavigation"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import MoveToTop from "./components/MoveToTop"
+import About from "./components/About"
 
 function App() {
     return (
@@ -44,6 +45,9 @@ function App() {
                     </Route>
                     <Route path="/veterinarian">
                         <Vet />
+                    </Route>
+                    <Route path="/about">
+                        <About />
                     </Route>
                     <Route path="*">
                         <NotFound />
