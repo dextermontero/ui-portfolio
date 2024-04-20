@@ -1,8 +1,8 @@
 export const timelineData = [
     {
-        dateTime: "June 2022",
-        title: "Bachelor Degree",
-        content: "College Graduated"
+        dateTime: "January 2024",
+        title: "Jr. Backend Developer",
+        content: "Second Job at Media Meter Inc."
     },
     {
         dateTime: "November 2022",
@@ -10,8 +10,8 @@ export const timelineData = [
         content: "First Job at WeSupport Inc."
     },
     {
-        dateTime: "January 2024",
-        title: "Jr. Backend Developer",
-        content: "Second Job at Media Meter Inc."
-    },
+        dateTime: "June 2022",
+        title: "Bachelor Degree",
+        content: "College Graduated"
+    }
 ]
