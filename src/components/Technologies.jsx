@@ -7,7 +7,7 @@ import { FcLinux } from "react-icons/fc";
 function SkillSets() {
     return (
         <>
-            <h1 className="mb-3 font-montserrat-bold uppercase tracking-wider text-3xl text-gray-700">Skills and Tools</h1>
+            <h1 className="text-3xl xl:text-4xl font-montserrat-extrabold mb-4 text-gray-700">Skills and Tools</h1>
             <div className="mb-14">
                 <div className="flex flex-wrap justify-start items-center content-center">
                     <div className="p-2 mb-4 hover:shadow-md rounded-lg border-1 hover:border-1 hover:bg-white transition duration-300 ease-in-out mr-2">

@@ -10,6 +10,7 @@ import OnProgress from "./OnProgress";
 import { FaBriefcase } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
 import { GiGraduateCap } from "react-icons/gi";
+import { CgGames } from "react-icons/cg";
 
 import IMAGES from "../data/imagesData"
 
@@ -29,9 +30,9 @@ function About() {
                 <OnProgress />
             ) : (
                 <section id="aboutme" className="container mb-20 group rounded-lg">
-                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 place-content-between items-center justify-center text-center mb-5">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 place-content-between items-center justify-center text-start mb-5">
                         <div className="order-2 xl:order-1">
-                            <h2 className="text-3xl xl:text-4xl font-montserrat-extrabold mb-4"><span className="text-yellow-500">About</span> Me</h2>
+                            <h2 className="text-3xl xl:text-4xl font-montserrat-extrabold mb-4 text-gray-700"><span className="text-yellow-500">About</span> Me</h2>
                             <p className="text-start mb-4 font-montserrat-regular text-md">
                                 An aspiring software and web developer. This Portfolio, contains my accomplished and ongoing personal and academic projects.
                             </p>
@@ -58,7 +59,7 @@ function About() {
                                     </div>
                                     <div className="flex items-center justify-start text-justify break-all">
                                         <div className="p-4 bg-slate-200 rounded-lg shadow-md mr-4">
-                                            <FaBriefcase className="h-5 w-5 xl:h-8 xl:w-8 text-gray-700"/>
+                                            <CgGames className="h-5 w-5 xl:h-8 xl:w-8 text-gray-700"/>
                                         </div>
                                         <div className="">
                                             <h2 className="text-md xl:text-lg font-montserrat-bold">Hobby</h2>
@@ -83,7 +84,7 @@ function About() {
                             </div>
                         </div>
                     </div>
-                    <h2 className="text-3xl xl:text-4xl font-montserrat-extrabold mb-4">Timeline</h2>
+                    <h2 className="text-3xl xl:text-4xl font-montserrat-extrabold mb-4 text-gray-700">Timeline</h2>
                     <div className="px-10 py-5 bg-gray-50 shadow-sm rounded-lg">
                         <Timeline horizontal>
                             {
