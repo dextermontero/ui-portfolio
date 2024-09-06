@@ -85,23 +85,22 @@ function About() {
                         </div>
                     </div>
                     <h2 className="text-3xl xl:text-4xl font-montserrat-extrabold mb-4 text-gray-700">Timeline</h2>
-                    <div className="px-10 py-5 bg-gray-50 shadow-sm rounded-lg">
-                        <Timeline horizontal>
-                            {
-                                timelineData.map((item, index) => (
-                                    <Timeline.Item  key={index} className="mt-8 md:p-8 md:mt-0">
-                                        <Timeline.Point icon={HiCalendar} />
-                                            <Timeline.Content className="p-4 ml-3 md:ml-3 md:p-0">
-                                                <Timeline.Time className="text-lg font-montserrat-medium">{item.dateTime}</Timeline.Time>
-                                                <Timeline.Title className="font-medium text-md font-montserrat-medium dark:text-gray-500">{item.title}</Timeline.Title>
-                                                <Timeline.Body className="dark:text-gray-500 font-montserrat-regular">
-                                                    <p className="text-justify">{item.content}</p>
-                                                </Timeline.Body>
-                                            </Timeline.Content>
-                                    </Timeline.Item>
-                                ))
-                            }
-                        </Timeline>
+                    <div className="px-6 py-5 bg-gray-50 shadow-sm rounded-lg">
+                        <nav aria-label="Progress">
+                            <ol role="list" className="space-y-4 md:flex md:space-x-8 md:space-y-0">
+                                {
+                                    timelineData.map((item, index) => (
+                                        <li className="md:flex-1" key={index}>
+                                            <a href={`#${item.title}`} className={`group flex flex-col border-l-4 ${item.border} py-2 pl-4 ${item.hoverborder} md:border-l-0 md:border-t-4 md:pb-2 md:pl-2 md:pt-3 hover:bg-slate-100 group:shadow-md`}>
+                                                <span className={`text-lg font-montserrat-black ${item.text} ${item.groupText}`}>{item.dateTime}</span>
+                                                <span className="text-md font-montserrat-bold">{item.title}</span>
+                                                <span className="text-sm font-montserrat-medium">{item.content}</span>
+                                            </a>
+                                        </li>
+                                    ))
+                                }
+                            </ol>
+                        </nav>
                     </div>
                 </section>
             )}

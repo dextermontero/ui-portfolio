@@ -28,30 +28,14 @@ function App() {
                         <Technologies />
                         <Projects />
                     </Route>
-                    <Route path="/kanban">
-                        <Kanban />
-                    </Route>
-                    <Route path="/qcu-management">
-                        <Management />
-                    </Route>
-                    <Route path="/qcu-attendance">
-                        <Attendance />
-                    </Route>
-                    <Route path="/jobSearch">
-                        <JobSearch />
-                    </Route>
-                    <Route path="/blind-stick-navigation">
-                        <BlindNavigation />
-                    </Route>
-                    <Route path="/veterinarian">
-                        <Vet />
-                    </Route>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="*">
-                        <NotFound />
-                    </Route>
+                    <Route path="/kanban" component={Kanban} />
+                    <Route path="/qcu-management" component={Management} />
+                    <Route path="/qcu-attendance" component={Attendance} />
+                    <Route path="/jobSearch" component={JobSearch} />
+                    <Route path="/blind-stick-navigation" component={BlindNavigation} />
+                    <Route path="/veterinarian" component={Vet} />
+                    <Route path="/about" component={About} />
+                    <Route path="*" component={NotFound} />
                 </Switch>
             </main>
             <MoveToTop />
