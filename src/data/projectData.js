@@ -1,5 +1,13 @@
 export const dataList = [
     {
+        img: "https://github.com/dextermontero/dextermontero.github.io/blob/main/assets/projects/default.png?raw=true",
+        title: "Set Nickname Bot",
+        type: 'Personal Project',
+        tools: 'Discord | Python',
+        github: "https://github.com/dextermontero/setnickname-discord-bot",
+        link: "discord"
+    },
+    {
         img: "https://github.com/dextermontero/dextermontero.github.io/blob/main/assets/projects/kanban/dashboard.png?raw=true",
         title: "Kanban Board",
         type: 'Personal Project',
