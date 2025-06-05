@@ -1,5 +1,13 @@
 export const dataList = [
     {
+        img: "https://github.com/dextermontero/dextermontero.github.io/blob/main/assets/projects/projects-monitoring.png?raw=true",
+        title: "Projects Monitoring",
+        type: 'Personal Project',
+        tools: 'React | TypeScript | Shadcn UI',
+        github: "https://github.com/dextermontero/kanban-react-ts",
+        link: "https://projects-monitoring.vercel.app/"
+    },
+    {
         img: "https://github.com/dextermontero/dextermontero.github.io/blob/main/assets/projects/default.png?raw=true",
         title: "Set Nickname Bot",
         type: 'Personal Project',

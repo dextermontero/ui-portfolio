@@ -85,3 +85,7 @@
     scrollbar-width: thin;
     scrollbar-color: var(--secondary) var(--primary);
 }
+
+body {
+    @apply bg-gray-100 text-gray-600;
+}
