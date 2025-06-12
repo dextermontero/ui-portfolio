@@ -1,9 +1,5 @@
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./assets/css/tailwindcss.css";
+import { createRoot } from 'react-dom/client'
+import App from '@/App'
+import "@/components/assets/css/tailwind.css"
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-	<div className="max-w-screen overflow-x-hidden mx-auto p-2">
-        <App />
-    </div>
-)
+createRoot(document.getElementById("root")!).render(<App />);
