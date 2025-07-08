@@ -13,7 +13,7 @@ const About: React.FC = () => {
         {
             icon: <Database className="h-8 w-8" />,
             title: 'Backend Development',
-            description: 'PHP/Laravel, Python, MySQL, MongoDB',
+            description: 'PHP/Laravel, FastAPI, MySQL, MongoDB, Express API',
             color: 'from-green-500/20 to-emerald-500/20'
         },
         {
