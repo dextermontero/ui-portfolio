@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import downloadCV from "@/components/assets/resume/Dexter_Montero.pdf";
+import downloadCV from "@/components/assets/resume/Dexter Montero.pdf";
 
 
 const Hero: React.FC = () => {
