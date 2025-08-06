@@ -13,20 +13,19 @@ const About: React.FC = () => {
         {
             icon: <Database className="h-8 w-8" />,
             title: 'Backend Development',
-            description: 'PHP/Laravel, FastAPI, MySQL, MongoDB, Express API',
+            description: 'PHP/Laravel, FastAPI, MySQL, MongoDB, Express API, Microservice',
             color: 'from-green-500/20 to-emerald-500/20'
         },
         {
             icon: <Globe className="h-8 w-8" />,
             title: 'Web Technologies',
-            description: 'REST APIs, Redis, AWS, Docker',
+            description: 'REST APIs, Redis',
             color: 'from-purple-500/20 to-violet-500/20'
         },
         {
             icon: <Smartphone className="h-8 w-8" />,
-            title: 'Mobile Development',
-            // description: 'React Native, Flutter, iOS/Android',
-            description: 'N/A',
+            title: 'DevOps & Cloud Tools',
+            description: 'k3s, Kustomize, AWS, Docker, CI/CD, Bitbucket Pipelines',
             color: 'from-orange-500/20 to-red-500/20'
         }
     ];
@@ -38,11 +37,9 @@ const About: React.FC = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                         About Me
                     </h2>
-                    {/* <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        I'm a passionate full-stack developer with over 5 years of experience building 
-                        scalable web applications. I love turning complex problems into simple, 
-                        beautiful designs.
-                    </p> */}
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        I'm a Backend Engineer passionate about building reliable, scalable APIs and microservices. I focus on designing clean, maintainable architectures and solving real-world problems through code. I enjoy working with modern backend technologies and continuously improving my skills in distributed systems, cloud infrastructure, and performance optimization.
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">

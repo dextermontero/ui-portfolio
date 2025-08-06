@@ -5,15 +5,15 @@ export const projects = [
         image: 'https://github.com/dextermontero/dextermontero.github.io/blob/main/assets/projects/project-monitoring-api.png?raw=true',
         technologies: ['Node.JS', 'Express API', 'JWT', 'MongoDB'],
         demoUrl: 'https://api-projects-monitoring.onrender.com/docs/',
-        githubUrl: 'https://github.com/dextermontero/kanban-api'
+        githubUrl: 'https://github.com/dextermontero/projects-monitoring-api'
     },
     {
-        title: 'Projects Monitoring',
+        title: 'Projects Monitoring UI',
         description: 'Work in progress.',
         image: 'https://github.com/dextermontero/dextermontero.github.io/blob/main/assets/projects/projects-monitoring.png?raw=true',
         technologies: ['React', 'TypeScript', 'Shadcn UI', 'Supabase'],
         demoUrl: 'https://projects-monitoring.vercel.app/',
-        githubUrl: 'https://github.com/dextermontero/kanban-react-ts'
+        githubUrl: 'https://github.com/dextermontero/projects-monitoring-ui'
     },
     {
         title: 'Set Nickname Bot',
