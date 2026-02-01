@@ -50,9 +50,8 @@ export function Footer() {
                         <h4 className="font-semibold text-foreground mb-4">Follow</h4>
                         <div className="flex gap-3">
                             {[
-                                { icon: Github, href: "#", label: "GitHub" },
-                                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                                { icon: Twitter, href: "#", label: "Twitter" },
+                                { icon: Github, href: "https://github.com/dextermontero", label: "GitHub" },
+                                { icon: Linkedin, href: "https://www.linkedin.com/in/dextermontero/", label: "LinkedIn" },
                                 {
                                     icon: Mail,
                                     href: "mailto:dexter.montero09@gmail.com",
@@ -63,6 +62,7 @@ export function Footer() {
                                 return (
                                     <a
                                         key={i}
+                                        target="_blank"
                                         href={social.href}
                                         aria-label={social.label}
                                         className="w-10 h-10 rounded-lg bg-card/50 border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:bg-card hover:border-accent/30 transition"

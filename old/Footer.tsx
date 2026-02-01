@@ -1,9 +1,9 @@
 import React from 'react';
-import { 
-    Github, 
-    Linkedin, 
-    Mail, 
-    // Heart 
+import {
+    Github,
+    Linkedin,
+    Mail,
+    // Heart
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -22,7 +22,6 @@ const Footer: React.FC = () => {
                         <a
                             href="https://github.com/dextermontero"
                             target="_blank"
-                            rel="noopener noreferrer"
                             className="text-muted-foreground hover:text-foreground transition-colors"
                         >
                             <Github size={20} />
@@ -30,7 +29,6 @@ const Footer: React.FC = () => {
                         <a
                             href="https://www.linkedin.com/in/dextermontero/"
                             target="_blank"
-                            rel="noopener noreferrer"
                             className="text-muted-foreground hover:text-foreground transition-colors"
                         >
                             <Linkedin size={20} />
@@ -43,7 +41,7 @@ const Footer: React.FC = () => {
                         </a>
                     </div>
                 </div>
-                    
+
                 <div className="text-center mt-4 pt-4">
                     <p className="text-sm text-muted-foreground">
                         © 2022 - {year} Dexter Montero. All rights reserved.
