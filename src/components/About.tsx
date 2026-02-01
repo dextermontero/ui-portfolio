@@ -67,13 +67,13 @@ const About: React.FC = () => {
                                 My Journey
                             </h3>
                             <p className="text-muted-foreground mb-4">
-                                I started my journey in web development 5 years ago, and since then, 
-                                I've had the privilege of working with amazing teams and clients to 
+                                I started my journey in web development 5 years ago, and since then,
+                                I've had the privilege of working with amazing teams and clients to
                                 build products that make a difference.
                             </p>
                             <p className="text-muted-foreground">
-                                When I'm not coding, you can find me exploring new technologies, 
-                                contributing to open-source projects, or sharing knowledge with the 
+                                When I'm not coding, you can find me exploring new technologies,
+                                contributing to open-source projects, or sharing knowledge with the
                                 developer community.
                             </p>
                         </div>
@@ -85,7 +85,7 @@ const About: React.FC = () => {
                             <div className="w-full bg-muted rounded-full h-2">
                                 <div className="bg-primary h-2 rounded-full" style={{ width: '95%' }}></div>
                             </div>
-                            
+
                             <div className="flex justify-between items-center">
                                 <span className="text-sm font-medium">Node.js/Python</span>
                                 <span className="text-sm text-muted-foreground">90%</span>
@@ -93,7 +93,7 @@ const About: React.FC = () => {
                             <div className="w-full bg-muted rounded-full h-2">
                                 <div className="bg-primary h-2 rounded-full" style={{ width: '90%' }}></div>
                             </div>
-                            
+
                             <div className="flex justify-between items-center">
                                 <span className="text-sm font-medium">UI/UX Design</span>
                                 <span className="text-sm text-muted-foreground">85%</span>

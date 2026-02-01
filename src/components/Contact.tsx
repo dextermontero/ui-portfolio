@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
                         Get In Touch
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        I'm always interested in new opportunities and interesting projects. 
+                        I'm always interested in new opportunities and interesting projects.
                         Let's discuss how we can work together!
                     </p>
                 </div>
@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
                             Let's Start a Conversation
                         </h3>
                         <p className="text-muted-foreground mb-8">
-                            Whether you have a project in mind, want to collaborate, or just want to say hello, 
+                            Whether you have a project in mind, want to collaborate, or just want to say hello,
                             I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible.
                         </p>
 
@@ -59,25 +59,25 @@ const Contact: React.FC = () => {
                                 </div>
                             </div>
 
-                        <div className="flex items-center space-x-4">
-                            <div className="p-3 bg-primary/10 rounded-lg">
-                                <Phone className="h-5 w-5 text-primary" />
+                            <div className="flex items-center space-x-4">
+                                <div className="p-3 bg-primary/10 rounded-lg">
+                                    <Phone className="h-5 w-5 text-primary" />
+                                </div>
+                                <div>
+                                    <p className="font-medium text-foreground">Phone</p>
+                                    <p className="text-muted-foreground">+63 (0976) 103-8160</p>
+                                </div>
                             </div>
-                            <div>
-                                <p className="font-medium text-foreground">Phone</p>
-                                <p className="text-muted-foreground">+63 (0976) 103-8160</p>
-                            </div>
-                        </div>
 
-                        <div className="flex items-center space-x-4">
-                            <div className="p-3 bg-primary/10 rounded-lg">
-                            <MapPin className="h-5 w-5 text-primary" />
+                            <div className="flex items-center space-x-4">
+                                <div className="p-3 bg-primary/10 rounded-lg">
+                                <MapPin className="h-5 w-5 text-primary" />
+                                </div>
+                                <div>
+                                <p className="font-medium text-foreground">Location</p>
+                                <p className="text-muted-foreground">Quezon City, Philippines</p>
+                                </div>
                             </div>
-                            <div>
-                            <p className="font-medium text-foreground">Location</p>
-                            <p className="text-muted-foreground">Quezon City, Philippines</p>
-                            </div>
-                        </div>
                         </div>
                     </div>
 
