@@ -24,7 +24,7 @@ export const projects: Project[] = [
         technologies: ['Node.js', 'Express', 'JWT', 'MongoDB', 'WebSocket'],
         status: 'In Progress',
         featured: true,
-        demo: 'https://api-projects-monitoring.onrender.com/docs/',
+        demo: 'https://projects-monitoring-api.vercel.app/docs',
         github: 'https://github.com/dextermontero/projects-monitoring-api'
     },
     {
