@@ -10,6 +10,15 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        title: 'Humana HRIS API',
+        description: 'RESTful API for Modern React dashboard for managing human resources with real-time data visualization and user management.',
+        technologies: ['React', 'TypeScript', 'ShadCN UI'],
+        status: 'In Progress',
+        featured: true,
+        demo: 'https://humana-api.vercel.app/docs',
+        github: 'https://github.com/dextermontero/hris-api'
+    },
+    {
         title: 'Humana HRIS UI',
         description: 'Modern React dashboard for managing human resources with real-time data visualization and user management.',
         technologies: ['React', 'TypeScript', 'ShadCN UI'],
