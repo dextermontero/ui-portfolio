@@ -12,7 +12,7 @@ export const projects: Project[] = [
     {
         title: 'Humana HRIS API',
         description: 'RESTful API for Modern React dashboard for managing human resources with real-time data visualization and user management.',
-        technologies: ['React', 'TypeScript', 'ShadCN UI'],
+        technologies: ['Node.js', 'Express', 'JWT', 'MongoDB', 'TypeScript', 'Swagger UI'],
         status: 'In Progress',
         featured: true,
         demo: 'https://humana-api.vercel.app/docs',
@@ -29,8 +29,8 @@ export const projects: Project[] = [
     },
     {
         title: 'Projects Monitoring API',
-        description: 'RESTful API for monitoring and managing project workflows with real-time updates and WebSocket support.',
-        technologies: ['Node.js', 'Express', 'JWT', 'MongoDB', 'WebSocket'],
+        description: 'RESTful API for monitoring and managing project workflows with real-time updates',
+        technologies: ['Node.js', 'Express', 'JWT', 'MongoDB', 'JavaScript', 'Swagger UI', 'Redis'],
         status: 'In Progress',
         featured: true,
         demo: 'https://projects-monitoring-api.vercel.app/docs',
