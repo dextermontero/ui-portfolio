@@ -5,7 +5,7 @@ export const skillCategories = [
     },
     {
         title: 'Backend',
-        skills: ['PHP/Laravel', 'FastAPI', 'Node.js/Express', 'Microservices']
+        skills: ['PHP/Laravel', 'FastAPI', 'Node.js/Express API', 'Microservices']
     },
     {
         title: 'Database',
@@ -13,6 +13,6 @@ export const skillCategories = [
     },
     {
         title: 'DevOps & Cloud',
-        skills: ['Docker', 'k3s', 'Kustomize', 'AWS', 'CI/CD', 'Bitbucket Pipelines']
+        skills: ['Docker', 'k3s', 'Kustomize', 'AWS', 'CI/CD', 'Kubernetes', 'ArgoCD', 'Bitbucket Pipelines']
     }
 ]

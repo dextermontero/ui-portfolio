@@ -10,9 +10,18 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        title: 'CSV Data Visualizer',
+        description: 'Developed a modern React-based dashboard that transforms CSV data into interactive visualizations, featuring dynamic chart rendering, real-time state management with Zustand, and export functionality—built with a focus on performance and usability, with AI-assisted development.',
+        technologies: ['React', 'TailwindCSS', 'ShadCN UI', 'Zustand', 'Recharts', 'html2canvas'],
+        status: 'In Progress',
+        featured: true,
+        demo: 'https://data-visualizer-flax.vercel.app/',
+        github: 'https://github.com/dextermontero/data-visualizer'
+    },
+    {
         title: 'Humana HRIS API',
         description: 'RESTful API for Modern React dashboard for managing human resources with real-time data visualization and user management.',
-        technologies: ['Node.js', 'Express', 'JWT', 'MongoDB', 'TypeScript', 'Swagger UI'],
+        technologies: ['Node.js', 'Express API', 'JWT', 'MongoDB', 'TypeScript', 'Swagger UI', 'Redis'],
         status: 'In Progress',
         featured: true,
         demo: 'https://humana-api.vercel.app/docs',
@@ -21,7 +30,7 @@ export const projects: Project[] = [
     {
         title: 'Humana HRIS UI',
         description: 'Modern React dashboard for managing human resources with real-time data visualization and user management.',
-        technologies: ['React', 'TypeScript', 'ShadCN UI'],
+        technologies: ['React', 'TypeScript', 'ShadCN UI', 'Tailwind CSS'],
         status: 'In Progress',
         featured: true,
         demo: 'https://humana-hris.vercel.app/',
@@ -30,7 +39,7 @@ export const projects: Project[] = [
     {
         title: 'Projects Monitoring API',
         description: 'RESTful API for monitoring and managing project workflows with real-time updates',
-        technologies: ['Node.js', 'Express', 'JWT', 'MongoDB', 'JavaScript', 'Swagger UI', 'Redis'],
+        technologies: ['Node.js', 'Express API', 'JWT', 'MongoDB', 'JavaScript', 'Swagger UI', 'Redis'],
         status: 'In Progress',
         featured: true,
         demo: 'https://projects-monitoring-api.vercel.app/docs',
