@@ -10,10 +10,28 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        title: 'Autovault Motors',
+        description: 'Built a modern car dealership SPA with a public storefront featuring a hero slider, filterable vehicle catalog, and reservation flow — paired with a full admin dashboard for managing inventory, hero slides, categories, and reservations, with PIN-based auth and real-time API integration.',
+        technologies: ['React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'Zustand', 'Axios', 'React Hook Form', 'Zod', 'Vite'],
+        status: 'Completed',
+        featured: true,
+        demo: 'https://autovault-motors.vercel.app/',
+        github: 'https://github.com/dextermontero/autovault'
+    },
+    {
+        title: 'AutoVault Motors API',
+        description: 'Built a production-ready REST API powering a car dealership platform, featuring multi-database support (MongoDB, SQLite, MySQL) via a repository pattern, full CRUD for inventory and reservations, Zod-validated endpoints, and OpenAPI docs—deployed on Vercel with AI-assisted development.',
+        technologies: ['Fastify', 'TypeScript', 'Drizzle ORM', 'MongoDB', 'Zod', 'Node.js', 'Vercel'],
+        status: 'Completed',
+        featured: true,
+        demo: 'https://autovault-api.vercel.app/api',
+        github: 'https://github.com/dextermontero/autovault-api'
+    },
+    {
         title: 'CSV Data Visualizer',
         description: 'Developed a modern React-based dashboard that transforms CSV data into interactive visualizations, featuring dynamic chart rendering, real-time state management with Zustand, and export functionality—built with a focus on performance and usability, with AI-assisted development.',
         technologies: ['React', 'TailwindCSS', 'ShadCN UI', 'Zustand', 'Recharts', 'html2canvas'],
-        status: 'In Progress',
+        status: 'Completed',
         featured: true,
         demo: 'https://data-visualizer-flax.vercel.app/',
         github: 'https://github.com/dextermontero/data-visualizer'
