@@ -25,20 +25,20 @@ export function Hero() {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-28">
+        <section className="relative min-h-svh flex items-center justify-center overflow-hidden px-4 py-20 lg:py-28">
 
             {/* ── Animated background ───────────────────────────── */}
             <div className="absolute inset-0 bg-background">
                 <div className="absolute inset-0 bg-grid opacity-60" />
-                <div className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full bg-primary/15 blur-[130px] animate-glow-drift" />
-                <div className="absolute -bottom-40 -right-32 w-[550px] h-[550px] rounded-full bg-accent/12 blur-[110px] animate-glow-drift delay-300" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full bg-primary/6 blur-[90px] animate-glow-drift delay-150" />
+                <div className="hidden lg:block absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full bg-primary/15 blur-[130px] animate-glow-drift" />
+                <div className="hidden lg:block absolute -bottom-40 -right-32 w-[550px] h-[550px] rounded-full bg-accent/12 blur-[110px] animate-glow-drift delay-300" />
+                <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full bg-primary/6 blur-[90px] animate-glow-drift delay-150" />
                 <div className="hero-vignette absolute inset-0" />
             </div>
 
             {/* ── Main content ──────────────────────────────────── */}
             <div className="relative z-10 max-w-6xl mx-auto w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
                     {/* ── Left column ─────────────────────────────── */}
                     <div>
@@ -165,7 +165,7 @@ export function Hero() {
                 </div>
 
                 {/* Scroll indicator */}
-                <div className="flex justify-center mt-16 animate-fade-in delay-700">
+                <div className="flex justify-center mt-10 lg:mt-16 animate-fade-in delay-700">
                     <button
                         onClick={() => scrollTo("about")}
                         className="flex flex-col items-center gap-1 text-muted-foreground

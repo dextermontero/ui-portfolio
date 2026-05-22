@@ -22,7 +22,7 @@ export function Footer() {
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
             {/* Subtle background glow */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-primary/6 blur-[80px] rounded-full pointer-events-none" />
+            <div className="hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-primary/6 blur-[80px] rounded-full pointer-events-none" />
 
             <div className="relative z-10 max-w-6xl mx-auto px-4 py-12">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">

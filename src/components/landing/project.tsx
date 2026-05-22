@@ -11,14 +11,14 @@ export function Project() {
     const otherProjects    = projects.filter((p) => !p.featured);
 
     return (
-        <section id="projects" className="relative py-24 px-4 overflow-hidden">
+        <section id="projects" className="relative py-16 lg:py-24 px-4 overflow-hidden">
             {/* Background accent */}
-            <div className="absolute right-0 top-1/3 w-[500px] h-[500px] rounded-full bg-accent/8 blur-[130px] pointer-events-none" />
+            <div className="hidden lg:block absolute right-0 top-1/3 w-[500px] h-[500px] rounded-full bg-accent/8 blur-[130px] pointer-events-none" />
 
             <div className="relative z-10 max-w-6xl mx-auto">
 
                 {/* ── Section header ─────────────────────────── */}
-                <div className="mb-16">
+                <div className="mb-10 lg:mb-16">
                     <div className="section-label mb-5">Portfolio</div>
                     <div className="flex items-end justify-between gap-4 flex-wrap">
                         <div>

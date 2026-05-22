@@ -29,14 +29,14 @@ const highlights = [
 
 export function About() {
     return (
-        <section id="about" className="relative py-24 px-4 overflow-hidden">
+        <section id="about" className="relative py-16 lg:py-24 px-4 overflow-hidden">
             {/* Background accents */}
             <div className="absolute inset-0 bg-gradient-to-b from-background via-card/10 to-background pointer-events-none" />
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary/8 blur-[130px] pointer-events-none" />
+            <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary/8 blur-[130px] pointer-events-none" />
 
             <div className="relative z-10 max-w-6xl mx-auto">
                 {/* Section header */}
-                <div className="mb-16">
+                <div className="mb-10 lg:mb-16">
                     <div className="section-label mb-5">About Me</div>
                     <h2 className="font-heading text-4xl lg:text-5xl font-bold text-foreground mb-4">
                         Passionate about{" "}

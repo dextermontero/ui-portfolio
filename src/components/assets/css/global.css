@@ -233,7 +233,6 @@ html {
 
 .animate-glow-drift {
   animation: glow-drift 4s ease-in-out infinite;
-  transform: translateZ(0);
   will-change: opacity;
 }
 
@@ -380,7 +379,7 @@ html {
   color: var(--accent);
 }
 
-/* ─── Mobile: disable backdrop-filter to prevent scroll jank ── */
+/* ─── Mobile: disable GPU-heavy effects to prevent scroll jank ─ */
 
 @media (hover: none) and (pointer: coarse) {
   .backdrop-blur-sm,
@@ -389,6 +388,13 @@ html {
   .backdrop-blur-xl {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+  }
+
+  /* Stop shimmer — background-position changes are NOT GPU-composited
+     and cause a repaint every frame on mobile */
+  .gradient-text-shimmer {
+    animation: none;
+    background-size: auto;
   }
 }
 
