@@ -13,7 +13,7 @@ export function Project() {
     return (
         <section id="projects" className="relative py-16 lg:py-24 px-4 overflow-hidden">
             {/* Background accent */}
-            <div className="hidden lg:block absolute right-0 top-1/3 w-[500px] h-[500px] rounded-full bg-accent/8 blur-[130px] pointer-events-none" />
+            <div className="hidden lg:block absolute right-0 top-1/3 w-[320px] h-[320px] rounded-full bg-accent/8 blur-[70px] pointer-events-none" />
 
             <div className="relative z-10 max-w-6xl mx-auto">
 

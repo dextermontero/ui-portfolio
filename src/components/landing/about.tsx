@@ -32,7 +32,7 @@ export function About() {
         <section id="about" className="relative py-16 lg:py-24 px-4 overflow-hidden">
             {/* Background accents */}
             <div className="absolute inset-0 bg-gradient-to-b from-background via-card/10 to-background pointer-events-none" />
-            <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary/8 blur-[130px] pointer-events-none" />
+            <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-[280px] h-[280px] rounded-full bg-primary/8 blur-[70px] pointer-events-none" />
 
             <div className="relative z-10 max-w-6xl mx-auto">
                 {/* Section header */}

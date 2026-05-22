@@ -398,13 +398,26 @@ html {
   }
 }
 
+/* ─── Content visibility: skip rendering off-screen sections ─── */
+
+#about,
+#projects,
+#contact {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 650px;
+}
+
 /* ─── Reduced motion ────────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
+  /* Hide blur orbs — they animate and are the largest GPU cost */
+  .animate-glow-drift {
+    display: none;
+  }
+
   .animate-fade-in-up,
   .animate-fade-in,
   .animate-float,
-  .animate-glow-drift,
   .animate-shimmer,
   .gradient-text-shimmer,
   .animate-bounce,

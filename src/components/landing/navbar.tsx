@@ -25,7 +25,7 @@ export function Navbar() {
             <div
                 className={`
                     flex items-center gap-1 px-2 py-2 rounded-2xl
-                    border border-border/60 backdrop-blur-xl
+                    border border-border/60 backdrop-blur-md
                     transition-all duration-300
                     ${scrolled
                         ? "bg-card/85 shadow-2xl shadow-black/30"
@@ -82,7 +82,7 @@ export function Navbar() {
 
             {/* Mobile dropdown */}
             {isOpen && (
-                <div className="absolute top-full mt-2 left-4 right-4 rounded-2xl bg-card/90 backdrop-blur-xl border border-border/60 shadow-2xl shadow-black/30 p-2 md:hidden animate-fade-in">
+                <div className="absolute top-full mt-2 left-4 right-4 rounded-2xl bg-card/90 backdrop-blur-md border border-border/60 shadow-2xl shadow-black/30 p-2 md:hidden animate-fade-in">
                     {navItems.map((item, i) => (
                         <a
                             key={i}

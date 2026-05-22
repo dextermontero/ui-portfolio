@@ -71,7 +71,7 @@ export function Contact() {
         <section id="contact" className="relative py-16 lg:py-24 px-4 overflow-hidden">
             {/* Background accents */}
             <div className="absolute inset-0 bg-gradient-to-b from-background via-card/10 to-background pointer-events-none" />
-            <div className="hidden lg:block absolute left-1/2 bottom-0 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
+            <div className="hidden lg:block absolute left-1/2 bottom-0 -translate-x-1/2 w-[380px] h-[260px] rounded-full bg-primary/10 blur-[70px] pointer-events-none" />
 
             <div className="relative z-10 max-w-6xl mx-auto">
 
