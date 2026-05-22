@@ -183,16 +183,28 @@ html {
   to   { clip-path: circle(200vmax at var(--theme-x, 50%) var(--theme-y, 50%)); }
 }
 
+@keyframes theme-fade-reveal {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 ::view-transition-old(root) {
   animation: none;
   z-index: 1;
 }
 
 ::view-transition-new(root) {
-  /* 600ms: cinematic ripple — visible and satisfying */
   animation: theme-circle-reveal 1s cubic-bezier(0.4, 0, 0.2, 1) both;
   z-index: 2;
   will-change: clip-path;
+}
+
+/* Mobile/touch: clip-path is not GPU-composited — swap to opacity fade to prevent jank */
+@media (hover: none), (max-width: 768px) {
+  ::view-transition-new(root) {
+    animation: theme-fade-reveal 250ms ease both;
+    will-change: opacity;
+  }
 }
 
 /*
