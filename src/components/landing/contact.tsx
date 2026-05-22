@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
-import emailjs from "@emailjs/browser";
 
 const contactMethods = [
     {
@@ -32,10 +31,6 @@ export function Contact() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
-    React.useEffect(() => {
-        emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-    }, []);
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
@@ -46,17 +41,20 @@ export function Contact() {
         setLoading(true);
         setError("");
         try {
-            await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                { name: formData.name, email: formData.email, subject: formData.subject, message: formData.message },
-            );
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}));
+                throw new Error(data.error || "Server error");
+            }
             setSubmitted(true);
             setFormData({ name: "", email: "", subject: "", message: "" });
             setTimeout(() => setSubmitted(false), 4000);
         } catch (err) {
-            setError("Failed to send message. Please try again.");
-            console.error("Email error:", err);
+            setError(err instanceof Error ? err.message : "Failed to send message. Please try again.");
         } finally {
             setLoading(false);
         }

@@ -30,8 +30,12 @@ export function ThemeToggle() {
             | ((fn: () => void) => { finished: Promise<void> })
             | undefined;
 
-        if (!vt) {
-            // Fallback: just let next-themes handle it
+        const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
+        if (!vt || isTouchDevice) {
+            // Touch devices: skip View Transition — bitmap capture is too slow on mobile
+            root.classList.toggle("dark", goingDark);
+            try { localStorage.setItem("theme", nextTheme); } catch { /* ignore */ }
             setTheme(nextTheme);
             return;
         }
