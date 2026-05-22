@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
-
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -167,8 +165,8 @@ html {
 }
 
 @keyframes glow-drift {
-  0%, 100% { opacity: 0.35; transform: scale(1); }
-  50%       { opacity: 0.65; transform: scale(1.08); }
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 0.6; }
 }
 
 @keyframes shimmer-move {
@@ -235,6 +233,8 @@ html {
 
 .animate-glow-drift {
   animation: glow-drift 4s ease-in-out infinite;
+  transform: translateZ(0);
+  will-change: opacity;
 }
 
 .animate-shimmer {
