@@ -1,147 +1,183 @@
-import { ArrowDown, Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowDown, Github, Linkedin, Mail, Phone, MapPin, FileText } from "lucide-react";
 import downloadCV from "@/components/assets/resume/Dexter Montero.pdf";
 
-export function Hero() {
-    const scrollToAbout = () => {
-        const element = document.getElementById("about");
-        element?.scrollIntoView({ behavior: "smooth" });
-    };
+const stats = [
+    { value: "8+",         label: "Projects Shipped" },
+    { value: "15+",        label: "Technologies" },
+    { value: "5+",         label: "Years Coding" },
+    { value: "Full-Stack", label: "Capability" },
+];
 
-    const scrollToProjects = () => {
-        const element = document.getElementById("projects");
-        element?.scrollIntoView({ behavior: "smooth" });
-    };
+const socials = [
+    { label: "GitHub",   href: "https://github.com/dextermontero",              icon: Github   },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/dextermontero/",    icon: Linkedin },
+    { label: "Email",    href: "mailto:dexter.montero09@gmail.com",             icon: Mail     },
+];
+
+const contactItems = [
+    { icon: Mail,   text: "dexter.montero09@gmail.com", href: "mailto:dexter.montero09@gmail.com" },
+    { icon: Phone,  text: "+63 (0976) 103-8160",        href: "tel:+63976103816" },
+    { icon: MapPin, text: "Quezon City, Philippines",   href: "#" },
+];
+
+export function Hero() {
+    const scrollTo = (id: string) =>
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent pointer-events-none" />
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-28">
 
-            <div className="max-w-6xl mx-auto w-full relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Left Column */}
+            {/* ── Animated background ───────────────────────────── */}
+            <div className="absolute inset-0 bg-background">
+                <div className="absolute inset-0 bg-grid opacity-60" />
+                <div className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full bg-primary/15 blur-[130px] animate-glow-drift" />
+                <div className="absolute -bottom-40 -right-32 w-[550px] h-[550px] rounded-full bg-accent/12 blur-[110px] animate-glow-drift delay-300" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full bg-primary/6 blur-[90px] animate-glow-drift delay-150" />
+                <div className="hero-vignette absolute inset-0" />
+            </div>
+
+            {/* ── Main content ──────────────────────────────────── */}
+            <div className="relative z-10 max-w-6xl mx-auto w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    {/* ── Left column ─────────────────────────────── */}
                     <div>
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6">
-                            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                            <span className="text-sm text-accent font-medium">
-                                Backend Engineer
-                            </span>
+                        <div className="section-label mb-8 animate-fade-in-up">
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse inline-block" />
+                            Backend Engineer · Full-Stack Developer
                         </div>
 
-                        <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
-                            Hi, I&apos;m{" "}
-                            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                                Dexter Montero
+                        <h1 className="font-heading text-6xl lg:text-[4.5rem] font-bold leading-[1.05] mb-6 animate-fade-in-up delay-150">
+                            <span className="block text-foreground/85 mb-1 text-4xl lg:text-5xl font-medium">
+                                Hi, I&apos;m
+                            </span>
+                            <span className="block gradient-text-shimmer">
+                                Dexter<br />Montero
                             </span>
                         </h1>
 
-                        <p className="text-lg text-muted-foreground mb-6 leading-relaxed max-w-xl">
-                            A passionate backend engineer building reliable, scalable APIs and
-                            microservices. I specialize in clean architecture, modern
-                            technologies, and solving real-world problems through code.
+                        <p className="text-lg text-muted-foreground leading-relaxed max-w-lg mb-10 animate-fade-in-up delay-300">
+                            I build{" "}
+                            <span className="text-foreground font-medium">reliable, scalable APIs</span>{" "}
+                            and microservices — specializing in clean architecture, cloud
+                            infrastructure, and solving real-world problems through code.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                            <Button
-                                onClick={scrollToProjects}
-                                size="lg"
-                                className="bg-primary hover:bg-primary-dark cursor-pointer"
+                        {/* CTAs */}
+                        <div className="flex flex-wrap gap-3 mb-10 animate-fade-in-up delay-400">
+                            <button
+                                onClick={() => scrollTo("projects")}
+                                className="px-7 py-3 rounded-xl bg-primary hover:bg-primary/85 text-primary-foreground
+                                           font-medium text-sm transition-all duration-200 cursor-pointer
+                                           hover:shadow-lg hover:shadow-primary/30"
                             >
                                 View My Work
-                            </Button>
-                            <a href={downloadCV} download="Dexter Montero.pdf" target="_blank" rel="noopener noreferrer">
-                                <Button variant="outline" size="lg" className='cursor-pointer text-foreground hover:text-blue-600 hover:bg-primary transition'>
-                                    Download Resume
-                                </Button>
+                            </button>
+                            <a
+                                href={downloadCV}
+                                download="Dexter Montero.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl
+                                           border border-border/70 hover:border-primary/50
+                                           text-foreground hover:text-primary text-sm font-medium
+                                           transition-all duration-200 cursor-pointer hover:bg-primary/5"
+                            >
+                                <FileText className="w-4 h-4" />
+                                Download Resume
                             </a>
                         </div>
 
-                        {/* Contact Info */}
-                        <div className="space-y-3 text-muted-foreground">
-                            <div className="flex items-center gap-3">
-                                <Mail className="w-5 h-5 text-accent" />
-                                <a
-                                    href="mailto:dexter.montero09@gmail.com"
-                                    className="hover:text-foreground transition"
-                                >
-                                    dexter.montero09@gmail.com
-                                </a>
+                        {/* Socials + contact */}
+                        <div className="animate-fade-in-up delay-500">
+                            <div className="flex items-center gap-2 mb-5">
+                                {socials.map(({ label, href, icon: Icon }) => (
+                                    <a
+                                        key={label}
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={label}
+                                        className="w-10 h-10 rounded-xl bg-card/60 border border-border/60
+                                                   flex items-center justify-center text-muted-foreground
+                                                   hover:text-accent hover:border-accent/40 hover:bg-accent/10
+                                                   transition-all duration-200 cursor-pointer backdrop-blur-sm"
+                                    >
+                                        <Icon className="w-4 h-4" />
+                                    </a>
+                                ))}
                             </div>
-                            <div className="flex items-center gap-3">
-                                <Phone className="w-5 h-5 text-accent" />
-                                <a
-                                    href="tel:+63976103816"
-                                    className="hover:text-foreground transition"
-                                >
-                                    +63 (0976) 103-8160
-                                </a>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <MapPin className="w-5 h-5 text-accent" />
-                                <span>Quezon City, Philippines</span>
+
+                            <div className="space-y-2">
+                                {contactItems.map(({ icon: Icon, text, href }) => (
+                                    <a
+                                        key={text}
+                                        href={href}
+                                        className="flex items-center gap-2.5 text-sm text-muted-foreground
+                                                   hover:text-foreground transition-colors duration-200 cursor-pointer w-fit"
+                                    >
+                                        <Icon className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                                        {text}
+                                    </a>
+                                ))}
                             </div>
                         </div>
                     </div>
 
-                    {/* Right Column - Stats */}
-                    <div className="space-y-6">
+                    {/* ── Right column – stat cards ─────────────────── */}
+                    <div className="animate-fade-in delay-200">
                         <div className="grid grid-cols-2 gap-4">
-                        {[
-                            { label: "Projects", value: "8+" },
-                            { label: "Tech Stack", value: "15+" },
-                            { label: "Years Coding", value: "5+" },
-                            { label: "Technologies", value: "Full-Stack" },
-                        ].map((stat, i) => (
-                            <div
-                                key={i}
-                                className="bg-card/50 border border-border rounded-xl p-6 backdrop-blur-sm hover:bg-card/80 transition"
-                            >
-                                <div className="text-3xl font-bold text-accent mb-2">
-                                    {stat.value}
+                            {stats.map((stat, i) => (
+                                <div
+                                    key={i}
+                                    className="card-glow-border group rounded-2xl p-6
+                                               bg-card/50 border border-border/70 backdrop-blur-sm
+                                               hover:bg-card/75 transition-all duration-300 cursor-default"
+                                >
+                                    <div className="text-3xl lg:text-4xl font-bold font-heading mb-1 gradient-text">
+                                        {stat.value}
+                                    </div>
+                                    <div className="text-sm text-muted-foreground">
+                                        {stat.label}
+                                    </div>
                                 </div>
-                                <div className="text-sm text-muted-foreground">
-                                    {stat.label}
-                                </div>
-                            </div>
-                        ))}
+                            ))}
                         </div>
 
-                        {/* Social Links */}
-                        <div className="flex gap-4">
-                            <a
-                                href="https://github.com/dextermontero"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-12 h-12 rounded-lg bg-card/50 border border-border flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition"
-                            >
-                                <Github className="w-5 h-5" />
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/dextermontero/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-12 h-12 rounded-lg bg-card/50 border border-border flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition"
-                            >
-                                <Linkedin className="w-5 h-5" />
-                            </a>
-                            <a
-                                href="mailto:dexter.montero09@gmail.com"
-                                className="w-12 h-12 rounded-lg bg-card/50 border border-border flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition"
-                            >
-                                <Mail className="w-5 h-5" />
-                            </a>
+                        {/* Decorative tech badge strip */}
+                        <div className="mt-4 p-4 rounded-2xl bg-card/30 border border-border/50 backdrop-blur-sm">
+                            <p className="text-xs text-muted-foreground mb-3 uppercase tracking-widest">
+                                Core Stack
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                                {["Laravel", "FastAPI", "Node.js", "React", "TypeScript", "Docker", "PostgreSQL", "Kubernetes"].map((t) => (
+                                    <span
+                                        key={t}
+                                        className="px-2.5 py-1 text-xs rounded-lg bg-primary/10 text-primary/90
+                                                   border border-primary/20 hover:bg-primary/20 transition cursor-default"
+                                    >
+                                        {t}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Scroll Indicator */}
-                <Button
-                    onClick={scrollToAbout}
-                    variant="ghost"
-                    className="cursor-pointer absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
-                >
-                    <ArrowDown className="w-6 h-6 text-accent" />
-                </Button>
+                {/* Scroll indicator */}
+                <div className="flex justify-center mt-16 animate-fade-in delay-700">
+                    <button
+                        onClick={() => scrollTo("about")}
+                        className="flex flex-col items-center gap-1 text-muted-foreground
+                                   hover:text-accent transition-colors duration-200 cursor-pointer group"
+                        aria-label="Scroll to about"
+                    >
+                        <span className="text-xs tracking-widest uppercase opacity-50 group-hover:opacity-100 transition">
+                            scroll
+                        </span>
+                        <ArrowDown className="w-4 h-4 animate-bounce" />
+                    </button>
+                </div>
             </div>
         </section>
     );

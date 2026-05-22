@@ -1,93 +1,84 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
+
+const socials = [
+    { icon: Github,   href: "https://github.com/dextermontero",           label: "GitHub"   },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/dextermontero/", label: "LinkedIn" },
+    { icon: Mail,     href: "mailto:dexter.montero09@gmail.com",          label: "Email"    },
+];
+
+const navLinks = [
+    { label: "Home",     href: "#" },
+    { label: "About",    href: "#about" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact",  href: "#contact" },
+];
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-background border-t border-border/30">
-            <div className="max-w-6xl mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <footer className="relative border-t border-border/30 overflow-hidden">
+            {/* Gradient line at top */}
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+
+            {/* Subtle background glow */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-primary/6 blur-[80px] rounded-full pointer-events-none" />
+
+            <div className="relative z-10 max-w-6xl mx-auto px-4 py-12">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
+
                     {/* Brand */}
-                    <div>
-                        <h3 className="text-lg font-bold text-foreground mb-4">Dexter</h3>
-                        <p className="text-sm text-muted-foreground">
-                            Full-stack developer passionate about building scalable APIs and
-                            modern web applications.
+                    <div className="text-center md:text-left">
+                        <a href="#" className="font-heading text-2xl font-bold gradient-text inline-block mb-2">
+                            DM
+                        </a>
+                        <p className="text-sm text-muted-foreground max-w-xs">
+                            Full-stack developer building scalable APIs and modern web applications.
                         </p>
                     </div>
 
-                    {/* Quick Links */}
-                    <div>
-                        <h4 className="font-semibold text-foreground mb-4">Navigation</h4>
-                        <ul className="space-y-2">
-                            {["Home", "About", "Projects", "Contact"].map((item, i) => (
-                                <li key={i}>
-                                    <a
-                                        href={item === "Home" ? "#" : `#${item.toLowerCase()}`}
-                                        className="text-muted-foreground hover:text-accent transition text-sm"
-                                    >
-                                        {item}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/* Nav links */}
+                    <nav className="flex items-center gap-6">
+                        {navLinks.map((item, i) => (
+                            <a
+                                key={i}
+                                href={item.href}
+                                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer"
+                            >
+                                {item.label}
+                            </a>
+                        ))}
+                    </nav>
 
-                    {/* Resources */}
-                    <div>
-                        <h4 className="font-semibold text-foreground mb-4">Tech Stack</h4>
-                        <ul className="space-y-2">
-                            {["React", "Laravel", "FastAPI", "Docker"].map((item, i) => (
-                                <li key={i} className="text-muted-foreground text-sm">
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Social */}
-                    <div>
-                        <h4 className="font-semibold text-foreground mb-4">Follow</h4>
-                        <div className="flex gap-3">
-                            {[
-                                { icon: Github, href: "https://github.com/dextermontero", label: "GitHub" },
-                                { icon: Linkedin, href: "https://www.linkedin.com/in/dextermontero/", label: "LinkedIn" },
-                                {
-                                    icon: Mail,
-                                    href: "mailto:dexter.montero09@gmail.com",
-                                    label: "Email",
-                                },
-                            ].map((social, i) => {
-                                const Icon = social.icon;
-                                return (
-                                    <a
-                                        key={i}
-                                        target="_blank"
-                                        href={social.href}
-                                        aria-label={social.label}
-                                        className="w-10 h-10 rounded-lg bg-card/50 border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:bg-card hover:border-accent/30 transition"
-                                    >
-                                        <Icon className="w-5 h-5" />
-                                    </a>
-                                );
-                            })}
-                        </div>
+                    {/* Social links */}
+                    <div className="flex items-center gap-2">
+                        {socials.map(({ icon: Icon, href, label }) => (
+                            <a
+                                key={label}
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={label}
+                                className="w-9 h-9 rounded-xl bg-card/50 border border-border/60
+                                           flex items-center justify-center text-muted-foreground
+                                           hover:text-accent hover:border-accent/40 hover:bg-accent/10
+                                           transition-all duration-200 cursor-pointer"
+                            >
+                                <Icon className="w-4 h-4" />
+                            </a>
+                        ))}
                     </div>
                 </div>
 
                 {/* Divider */}
                 <div className="border-t border-border/30 pt-8">
-                    <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-                        <p>
-                            &copy; 2022 - {currentYear} Dexter Montero. All rights reserved.
-                        </p>
-                        <div className="flex gap-6">
-                            <a href="#" className="hover:text-foreground transition">
-                                Privacy Policy
-                            </a>
-                            <a href="#" className="hover:text-foreground transition">
-                                Terms of Service
-                            </a>
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+                        <p>&copy; 2022 – {currentYear} Dexter Montero. All rights reserved.</p>
+                        <div className="flex items-center gap-1">
+                            <span>Built with</span>
+                            <span className="text-primary font-medium">React</span>
+                            <span>+</span>
+                            <span className="text-accent font-medium">Tailwind CSS</span>
                         </div>
                     </div>
                 </div>

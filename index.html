@@ -1,11 +1,22 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Backend engineer passionate about building reliable, scalable APIs and microservices. Explore my projects in Laravel, FastAPI, Node.js, and more." />
     <meta name="theme-color" content="#0F172A" />
+    <!-- Anti-FOUC: apply stored theme before first paint -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme') || 'light';
+          document.documentElement.classList.toggle('dark', t === 'dark');
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <title>Dexter Montero - Full-Stack Developer</title>
   </head>
   <body>

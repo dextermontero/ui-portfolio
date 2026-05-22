@@ -10,8 +10,7 @@ const Index: React.FC = () => {
         <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
             <Navbar />
 
-            {/* Add margin-top to account for fixed navbar */}
-            <div className="pt-16">
+            <div>
                 <Hero />
                 <About />
                 <Project />
