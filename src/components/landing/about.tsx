@@ -60,9 +60,9 @@ export function About() {
                             </p>
                             <p>
                                 I continuously improve my skills by exploring emerging
-                                technologies, contributing to open-source projects, and tackling
-                                complex technical challenges. When I&apos;m not coding, I enjoy
-                                mentoring other developers and staying updated with industry trends.
+                                technologies and tackling complex technical challenges. When I&apos;m
+                                not coding, I enjoy mentoring other developers and staying updated
+                                with industry trends.
                             </p>
                         </div>
 
