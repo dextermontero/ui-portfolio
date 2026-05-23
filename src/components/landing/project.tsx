@@ -110,7 +110,7 @@ export function Project() {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg
-                                                           bg-accent/15 text-accent hover:bg-accent hover:text-accent-foreground
+                                                           accent-btn-ghost text-accent hover:bg-accent hover:text-accent-foreground
                                                            transition-all duration-200 text-xs font-medium cursor-pointer"
                                             >
                                                 <ExternalLink className="w-3.5 h-3.5" />

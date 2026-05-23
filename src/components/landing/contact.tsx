@@ -101,9 +101,9 @@ export function Contact() {
                                            bg-card/50 border border-border/70 backdrop-blur-sm
                                            hover:bg-card/70 transition-all duration-300 cursor-pointer"
                             >
-                                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20
+                                <div className="w-10 h-10 rounded-xl border icon-container
                                                flex items-center justify-center flex-shrink-0
-                                               group-hover:bg-primary/20 transition">
+                                               transition">
                                     <Icon className="w-4 h-4 text-primary" />
                                 </div>
                                 <div>
@@ -121,8 +121,7 @@ export function Contact() {
                         ))}
 
                         {/* Availability card */}
-                        <div className="p-5 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/5
-                                       border border-primary/20 backdrop-blur-sm">
+                        <div className="p-5 rounded-2xl availability-card backdrop-blur-sm">
                             <div className="flex items-center gap-2 mb-2">
                                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                                 <span className="text-xs font-semibold text-emerald-400 uppercase tracking-widest">
