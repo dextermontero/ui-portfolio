@@ -90,7 +90,7 @@ export function Project() {
                                         {project.technologies.slice(0, isSpotlight ? 8 : 4).map((tech, j) => (
                                             <span
                                                 key={j}
-                                                className="px-2 py-0.5 text-xs rounded-md bg-primary/10 text-primary/80 border border-primary/20"
+                                                className="px-2 py-0.5 text-xs rounded-md border tech-badge"
                                             >
                                                 {tech}
                                             </span>
@@ -173,7 +173,7 @@ export function Project() {
                                     </p>
                                     <div className="flex flex-wrap gap-1">
                                         {project.technologies.slice(0, 3).map((tech, j) => (
-                                            <span key={j} className="text-xs px-1.5 py-0.5 rounded bg-primary/10 text-primary/80">
+                                            <span key={j} className="text-xs px-1.5 py-0.5 rounded tech-badge">
                                                 {tech}
                                             </span>
                                         ))}

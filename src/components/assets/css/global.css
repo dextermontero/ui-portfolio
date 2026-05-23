@@ -407,6 +407,28 @@ html {
   contain-intrinsic-size: 0 650px;
 }
 
+/* ─── Tech badge (pre-computed for mobile Safari color-mix compat) ─ */
+
+.tech-badge {
+  background-color: oklch(0.48 0.22 262.8 / 10%);
+  color:            oklch(0.48 0.22 262.8);
+  border-color:     oklch(0.48 0.22 262.8 / 20%);
+}
+
+.tech-badge:hover {
+  background-color: oklch(0.48 0.22 262.8 / 20%);
+}
+
+:is(.dark *) .tech-badge {
+  background-color: oklch(0.58 0.22 262.8 / 10%);
+  color:            oklch(0.58 0.22 262.8);
+  border-color:     oklch(0.58 0.22 262.8 / 20%);
+}
+
+:is(.dark *) .tech-badge:hover {
+  background-color: oklch(0.58 0.22 262.8 / 20%);
+}
+
 /* ─── Reduced motion ────────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {

@@ -165,8 +165,7 @@ export function Hero() {
                                 {["Laravel", "FastAPI", "Node.js", "React", "TypeScript", "Docker", "PostgreSQL", "Kubernetes"].map((t) => (
                                     <span
                                         key={t}
-                                        className="px-2.5 py-1 text-xs rounded-lg bg-primary/10 text-primary/90
-                                                   border border-primary/20 hover:bg-primary/20 transition cursor-default"
+                                        className="px-2.5 py-1 text-xs rounded-lg border tech-badge transition cursor-default"
                                     >
                                         {t}
                                     </span>
